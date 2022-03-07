@@ -29,6 +29,10 @@ func (connection *RabbitMQConnection) CloseChannel() error {
 	return nil
 }
 
+func (connection *RabbitMQConnection) GetQueue(name string) Queue {
+	return connection.queues[name]
+}
+
 func (connection *RabbitMQConnection) Set(conn *amqp.Connection, channel *amqp.Channel, queues map[string]Queue, exchange string) {
 	connection.conn = conn
 	connection.channel = channel
