@@ -40,17 +40,18 @@ func (connection *RabbitMQConnection) Set(conn *amqp.Connection, channel *amqp.C
 	connection.exchange = exchange
 }
 
-func (connection *RabbitMQConnection) AddQueue(queue Queue) error {
-	connection.queues[queue.Name] = queue
-	if _, err := connection.channel.QueueDeclare(queue.Name, true, false, false, false, nil); err != nil {
-		return err
-	}
-	for _, k := range queue.Keys {
-		if err := connection.channel.QueueBind(queue.Name, k, connection.exchange, false, nil); err != nil {
+func (connection *RabbitMQConnection) AddQueues(queues []Queue) error {
+	for _, q := range queues {
+		connection.queues[q.Name] = q
+		if _, err := connection.channel.QueueDeclare(q.Name, true, false, false, false, nil); err != nil {
 			return err
 		}
+		for _, k := range q.Keys {
+			if err := connection.channel.QueueBind(q.Name, k, connection.exchange, false, nil); err != nil {
+				return err
+			}
+		}
 	}
-
 	return nil
 }
 
