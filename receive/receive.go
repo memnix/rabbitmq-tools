@@ -45,7 +45,7 @@ func main() {
 		Name: "info",
 	}}
 
-	err = connection.SetQueues(queues)
+	err = connection.AddQueues(queues)
 	if err != nil {
 		return
 	}
