@@ -2,6 +2,7 @@ package rabbitmqtools
 
 import (
 	"fmt"
+
 	amqp "github.com/rabbitmq/amqp091-go"
 )
 
@@ -71,7 +72,7 @@ func (connection *RabbitMQConnection) RaiseError(err error) {
 	connection.error <- err
 }
 
-func (connection *RabbitMQConnection) InitConnection(url string, exchange string) error {
+func (connection *RabbitMQConnection) InitConnection(url, exchange string) error {
 	conn, err := amqp.Dial(url)
 	if err != nil {
 		return fmt.Errorf("failed to connect to RabbitMQ: %s", err)
