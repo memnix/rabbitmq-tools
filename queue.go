@@ -10,7 +10,5 @@ func (queue *Queue) AddKey(key string) {
 }
 
 func (queue *Queue) AddKeys(keys []string) {
-	for _, q := range keys {
-		queue.Keys = append(queue.Keys, q)
-	}
+	queue.Keys = append(queue.Keys, keys...)
 }
