@@ -1,7 +1,8 @@
 # rabbitmq-tools
 A set of tools to help working with rabbitmq
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/memnix/rabbitmq-tools)](https://goreportcard.com/report/github.com/memnix/rabbitmq-tools)![GitHub](https://img.shields.io/github/license/Memnix/rabbitmq-tools?style=flat-square) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/memnix/rabbitmq-tools?style=flat-square)
+[![Go Report Card](https://goreportcard.com/badge/github.com/memnix/rabbitmq-tools)](https://goreportcard.com/report/github.com/memnix/rabbitmq-tools)![GitHub](https://img.shields.io/github/license/Memnix/rabbitmq-tools?style=flat-square) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/memnix/rabbitmq-tools?style=flat-square) 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/memnix/rabbitmq-tools/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/memnix/rabbitmq-tools/?branch=main) [![Build Status](https://scrutinizer-ci.com/g/memnix/rabbitmq-tools/badges/build.png?b=main)](https://scrutinizer-ci.com/g/memnix/rabbitmq-tools/build-status/main)
 
 ## Disclaimer
 
