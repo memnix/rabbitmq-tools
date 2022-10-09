@@ -1,6 +1,8 @@
 # rabbitmq-tools
 A set of tools to help working with rabbitmq
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/memnix/rabbitmq-tools)](https://goreportcard.com/report/github.com/memnix/rabbitmq-tools)![GitHub](https://img.shields.io/github/license/Memnix/rabbitmq-tools?style=flat-square) ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/memnix/rabbitmq-tools?style=flat-square)
+
 ## Disclaimer
 
 This is a work in progress and is not ready for production use. Use at your own risk. 
